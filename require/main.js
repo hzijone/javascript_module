@@ -6,12 +6,10 @@
  * @param  {[type]} Backbone){} [description]
  * @return {[type]}               [description]
  */
-// require(['jquery','underscore','backbone'],function($,_,backbone){
+require(['jquery','underscore','backbone'],function($,_,backbone){
 
 
-
-
-// });
+});
 
 
 /**
@@ -22,9 +20,9 @@ require.config({
 	// baseUrl:"js",
 	paths:{
 		// "jquery":"jquery.min",
-		"underscore":"http://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js",
-		"backbone":"http://cdn.bootcss.com/backbone.js/1.3.3/backbone-min.js",
-		"jquery": "http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"
+		"underscore":"http://cdn.bootcss.com/underscore.js/1.8.3/underscore-min",
+		"backbone":"http://cdn.bootcss.com/backbone.js/1.3.3/backbone-min",
+		"jquery": "http://cdn.bootcss.com/jquery/3.1.1/jquery.min"
 	}
 
 });
@@ -32,22 +30,15 @@ require.config({
 
 
 /**************一个模块不依赖其它模块*******/
-
-define(function(){
-  
-    var add = function(x,y){
-    	return x+y;
-    };
-    return {
-    	add:add
-    }; 
-
-})();
-
-
 require(['math'],function(math){
-	 alert(math.add(1,1));
+	 // alert(math.add(1,1));
+	 document.write(math.add(1,1));
+	 // document.write(math.foo());
 });
+
+
+
+
 
 
 
